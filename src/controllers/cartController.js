@@ -1,7 +1,7 @@
 const {Carrito} = require("../containers/classes/CartContainer")
-const {Producto} = require('../classes/producto')
-const carrito = new Carrito(__dirname + "/data/carrito.json")
-const producto = new Producto(__dirname + "/data/productos.json")
+
+const carrito = new Carrito
+
 
 const getCarrito = (req, res) => {
     const cart = carrito.getAll()

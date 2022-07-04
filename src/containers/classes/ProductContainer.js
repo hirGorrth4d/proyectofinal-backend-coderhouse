@@ -9,3 +9,5 @@ class ProductContainer {
         this.thumbnail = thumbnail
     }
 }
+
+module.exports = ProductContainer

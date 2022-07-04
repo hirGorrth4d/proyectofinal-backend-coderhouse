@@ -10,7 +10,6 @@ class CartContainer {
         const timestamp = today.toUTCString()
         return timestamp
     }
-    getById(id){
-        
-    }
 }
+
+module.exports = CartContainer

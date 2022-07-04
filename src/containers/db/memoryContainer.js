@@ -22,4 +22,19 @@ class MemoryContainer{
         let cart = this.contenedor.length
         return cart
     }
+    updateProduct(updatedProd){
+        const obj = this.contenedor.findIndex(x => x.id ==id);
+        if (obj == -1) {
+            throw new Error ("error al actualizar")
+        } else {
+            this.contenedor[obj] = updatedProd
+            return updatedProd
+        }
+    }
+    deleteById(id){
+        this.contenedor.filter(x => x.id !== id)
+    }
+    deleteAll() {
+        this.contenedor = []
+    }
 }
