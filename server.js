@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8080;
 require('dotenv').config()
+const port = process.env.PORT || 8080;
 
 
 const productRoute = require("./src/routes/routerProduct");
@@ -10,9 +10,9 @@ const route = require("./src/routes");
 
 
 // static files
-app.use(express.static(__dirname+"/src/public"));
+app.use('/static', express.static(__dirname+"/src/public"));
 app.use(express.urlencoded({extended:true}))
-
+app.set('view engine', 'ejs')
 
 // rutas
 

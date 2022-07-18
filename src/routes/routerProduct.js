@@ -1,12 +1,12 @@
 const express = require("express");
 const {Router} = express;
-const routerProduct = new Router();
+const productRoute = new Router();
 
-const producto = require("../controllers/productController");
-
-
-routerProduct.get("/", producto.getCarrito);
-routerProduct.post("/", producto.addCarrito);
+const product = require("../controllers/productController");
 
 
-module.exports = routerProduct
+productRoute.get("/", product.getCarrito);
+productRoute.post("/", product.addCarrito);
+
+
+module.exports = productRoute
